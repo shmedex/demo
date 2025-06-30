@@ -1,0 +1,413 @@
+    .smile-arc {
+      display: inline-block;
+      width: 28px;
+      height: 16px;
+      border-bottom: 4px solid #377dff;
+      border-radius: 0 0 28px 28px;
+      margin-right: 10px;
+      position: relative;
+      top: 4px;
+    }
+
+    /* Navbar link icons */
+    .nav-link .icon {
+      font-size: 14px;
+      margin-right: 4px;
+    }
+
+    /* Custom blue button with icon */
+    .btn-blue-icon {
+      background-color: #377dff;
+      border-color: #377dff;
+      color: white;
+      border-radius: 12px;
+      padding: 8px 20px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+
+    .btn-blue-icon:hover,
+    .btn-blue-icon:focus {
+      background-color: #245acc;
+      border-color: #245acc;
+      color: white;
+    }
+
+    /* Button icon container */
+    .icon-container {
+      background: white;
+      color: #377dff;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Secondary outlined button */
+    .btn-outline-blue {
+      border-color: #377dff;
+      color: #377dff;
+      border-radius: 12px;
+      padding: 8px 20px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+
+    .btn-outline-blue:hover,
+    .btn-outline-blue:focus {
+      background-color: #e6f0ff;
+      border-color: #245acc;
+      color: #245acc;
+    }
+
+    /* Hero background with subtle triangular pattern */
+    .hero-section {
+      background-color: #f7fbff;
+      background-image: repeating-radial-gradient(circle at center, #dbe7ff 0, #dbe7ff 1px, transparent 1px, transparent 16px), repeating-radial-gradient(circle at center, #eaf2ff 0, #eaf2ff 1px, transparent 1px, transparent 16px);
+      border-radius: 1.25rem;
+      padding: -1rem 1.5rem 5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Hero text alignment and spacing */
+    .hero-text {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero-text h1 {
+      font-weight: 700;
+      font-size: 2.75rem;
+      line-height: 1.1;
+    }
+
+    .hero-text h1 .highlight-blue {
+      color: #377dff;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      color: #666;
+      margin: 1rem auto 2rem auto;
+      font-weight: 500;
+      max-width: 480px;
+    }
+
+    .cards-container {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card-custom {
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      border: none;
+      padding: 1.4rem 1.6rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: visible;
+      font-weight: 600;
+      transition: box-shadow 0.3s ease;
+      width: 240px;
+      margin-bottom: 20px;
+    }
+
+    .card-custom:hover {
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Right arrow inside a blue rounded square on the top right corner */
+    .card-icon-container {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 36px;
+      height: 36px;
+      background-color: #377dff;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-icon-container:hover {
+      background-color: #245acc;
+    }
+
+    .card-icon-container svg {
+      fill: white;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Card text */
+    .card-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #111;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-subtitle {
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    /* The doctor image container positioned above the cards row */
+    .doctor-image-container {
+      position: relative;
+      width: 320px;
+      height: 420px;
+      margin: 0 20px;
+      z-index: 10;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .doctor-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .doctor-image-container {
+        width: 220px;
+        height: 320px;
+      }
+      
+      .cards-container {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .doctor-image-container {
+        order: -1;
+        margin-bottom: 20px;
+        width: 180px;
+        height: 240px;
+      }
+    }
+    /* Section titles */
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Icon boxes */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-primary-light {
+  background-color: rgba(55, 125, 255, 0.1);
+}
+
+/* Service cards */
+/* Service Card Version 2 */
+.service-card-v2 {
+  transition: all 0.4s ease;
+  background-color: #fff;
+}
+
+.service-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.service-title {
+  position: relative;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.service-content {
+  padding: 2rem;
+  background: white;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.service-card-v2:hover .service-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.service-card-v2:hover .service-image {
+  transform: translateY(-40%);
+}
+
+/* Icon Box */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-box i {
+  font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .service-image {
+    height: 250px;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+  
+  .service-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .service-image {
+    height: 220px;
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Accordion styles */
+.accordion-button {
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #377dff;
+  background-color: rgba(55, 125, 255, 0.05);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(55, 125, 255, 0.25);
+}
+
+/* Contact form */
+.form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.form-control:focus {
+  border-color: #377dff;
+  box-shadow: 0 0 0 0.25rem rgba(55, 125, 255, 0.25);
+}
+
+/* Footer links */
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #377dff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
